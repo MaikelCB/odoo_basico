@@ -1,10 +1,10 @@
 <odoo>
-    <data>
+    <data noupdate="1">
         <record model="odoo_basico.informacion" id="odoo_basicoinformacion1">
             <field name="name">Rexistro 1</field>
             <field name="descripcion">Descripción Rexistro 1</field>
             <field name="autorizado">True</field>
-            <field name="sexo_traducido">Hombre</field>
+            <field name="sexo_traducido">Mujer</field>
             <field name="alto_en_cms">1</field>
             <field name="longo_en_cms">1</field>
             <field name="ancho_en_cms">1</field>
@@ -40,6 +40,8 @@
             <field name="ancho_en_cms">4</field>
             <field name="peso">4</field>
         </record>
+    </data>
+    <data>
         <record model="odoo_basico.informacion" id="odoo_basicoinformacion5">
             <field name="name">Rexistro 5</field>
             <field name="descripcion">Descripción Rexistro 5</field>
@@ -53,7 +55,7 @@
         <record model="odoo_basico.informacion" id="odoo_basicoinformacion6">
             <field name="name">Rexistro 6</field>
             <field name="descripcion">Descripción Rexistro 6</field>
-            <field name="autorizado">False</field>
+            <field name="autorizado">True</field>
             <field name="sexo_traducido">Mujer</field>
             <field name="alto_en_cms">4</field>
             <field name="longo_en_cms">4</field>
