@@ -3,7 +3,7 @@
         <record model="ir.actions.act_window" id="lineapedido_list_action">
             <field name="name">A acción de linea pedido</field>
             <field name="res_model">odoo_basico.lineapedido</field>
-            <field name="view_mode">form, tree</field>
+            <field name="view_mode">form,tree</field>
             <field name="help" type="html">
                 <p class="o_view_nocontent_smiling_face">Tes que crear o primeiro rexistro</p>
             </field>
@@ -26,7 +26,7 @@
             <field name="name">lineapedido.tree</field>
             <field name="model">odoo_basico.lineapedido</field>
             <field name="arch" type="xml">
-                <tree string="lineapedido Tree" editable="top">
+                <tree string="lineapedido Tree">
                     <field name="name"/>
                     <field name="descripcion"/>
                 </tree>
