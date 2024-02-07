@@ -18,6 +18,7 @@
                             <field name="name"/>
                             <field name="descripcion"/>
                         </group>
+                        <field name="informacion_ids"/>
                     </sheet>
                 </form>
             </field>
