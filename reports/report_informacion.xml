@@ -123,8 +123,7 @@
                                         </h5>
                                     </div>
                                     <div class="row" style="margin: auto; width: 55%;">
-                                        <img t-att-src="'data:image/png;base64,%s' % to_text(o.foto)"
-                                             style="max-height: 500px;max-width: 500px;"/>
+                                        <img t-attf-src="data:image/*;base64,{{o.foto}} "  style="max-height: 500px;max-width: 500px;"/>
                                     </div>
                                 </div>
                             </t>
