@@ -20,17 +20,19 @@
     'version': '0.1',
 
     # any module necessary for this one to work correctly
-    'depends': ['base'],
+    'depends': ['base', 'account'],
 
     # always loaded
     'data': [
-        'views/informacion.xml',
-        'views/suceso.xml',
+        'views/persoa.xml',
         'views/pedido.xml',
         'views/lineapedido.xml',
+        'views/informacion.xml',
+        'views/suceso.xml',
         'views/templates.xml',
         'reports/report_header.xml',
         'reports/report_informacion.xml',
+        'accions_planificadas/accions_planificadas.xml',
         'views/menu.xml',
         'security/ir.model.access.csv',
     ],

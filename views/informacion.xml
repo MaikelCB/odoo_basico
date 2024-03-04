@@ -68,14 +68,21 @@
                                     <field name="creador_da_moeda"/>
                                 </group>
                             </page>
-                            <page string="Data e Hora">
+                            <page string="Datas">
                                 <group>
-                                    <field name="data"/>
-                                    <field name="data_hora"/>
-                                    <field name="hora_utc"/>
-                                    <field name="hora_actual"/>
-                                    <field name="hora_timezone_usuario"/>
-
+                                    <group>
+                                        <field name="data_hora"/>
+                                        <field name="hora_utc"/>
+                                        <field name="hora_actual"/>
+                                        <field name="hora_timezone_usuario"/>
+                                    </group>
+                                    <group>
+                                        <field name="data"/>
+                                        <field name="mes_castelan"/>
+                                        <field name="mes_galego"/>
+                                        <field name="mes_ingles"/>
+                                        <field name="mes_frances"/>
+                                    </group>
                                 </group>
                             </page>
                         </notebook>

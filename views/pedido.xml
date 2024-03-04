@@ -8,40 +8,55 @@
                 <p class="o_view_nocontent_smiling_face">Tes que crear o primeiro rexistro</p>
             </field>
         </record>
+
+        <record model="ir.ui.view" id="pedido_form_view">
+            <field name="name">pedido.form</field>
+            <field name="model">odoo_basico.pedido</field>
+            <field name="arch" type="xml">
+                <form string="Formulario de Pedido">
+                    <header>
+                        <button name="actualizadorSexo" type="object"
+                                string="Actualiza o campo Sexo do modelo información"/>
+                        <button name="creaRexistroInformacion" type="object"
+                                string="Crea un rexistro no modelo información"/>
+                        <button name="actualizaRexistroInformacion" type="object"
+                                string="Actualiza o rexistro creado no modelo información"/>
+                        <button name="actualizadorHoraTimezone" type="object"
+                                string="Actualiza Hora Timezone do Usuario en todos os rexistros do modelo información"/>
+                    </header>
+                    <sheet>
+                        <group>
+                            <field name="name"/>
+                            <field name="persoa_id"/>
+                        </group>
+                        <separator string="Visualizar e engadir"/>
+                        <field name="lineapedido_ids"/>
+                        <!--     Se quixeramos que non se poideran editar as lineapedido:
+                            <separator string="Só visualizar"/>
+                            <field name="lineapedido_ids" readonly="1"/>-->
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
         <record model="ir.ui.view" id="pedido_tree_view">
             <field name="name">pedido.tree</field>
             <field name="model">odoo_basico.pedido</field>
             <field name="arch" type="xml">
-                <tree string="pedido Tree">
+                <tree string="pedido tree">
                     <field name="name"/>
                     <field name="lineapedido_ids"/>
                 </tree>
             </field>
         </record>
-        <record model="ir.ui.view" id="pedido_form_view">
-            <field name="name">pedido.form</field>
+
+        <record model="ir.ui.view" id="pedido_search_view">
+            <field name="name">pedido.search</field>
             <field name="model">odoo_basico.pedido</field>
             <field name="arch" type="xml">
-                <form string="Formulario pedido">
-                    <header>
-                        <button name="actualizadorSexo" type="object"
-                                string="Actualiza o campo Sexo do modelo Información"/>
-                        <button name="creaRexistroInformacion" type="object"
-                                string="Crea un Rexistro en Información"/>
-                        <button name="actualizaRexistroInformacion" type="object"
-                                string="Actualiza un Rexistro de Información"/>
-                        <button name="actualizadorHoraTimezone" type="object"
-                                string="Actualiza Hora Timezone do Usuario en todos os rexistros do modelo información"/>
-                    </header>
-                    <sheet>
-                        <field name="name"/>
-                        <separator string="Visualizar e engadir"/>
-                        <field name="lineapedido_ids"/>
-                        <!-- Non permite editar -->
-                        <!--  <separator string="Só visualizar"/>-->
-                        <!--  <field name="lineapedido_ids" readonly="1"/> -->
-                    </sheet>
-                </form>
+                <search>
+                    <field name="name"/>
+                </search>
             </field>
         </record>
     </data>
