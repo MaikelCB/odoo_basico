@@ -123,11 +123,78 @@
                                         </h5>
                                     </div>
                                     <div class="row" style="margin: auto; width: 55%;">
-                                        <img t-attf-src="data:image/*;base64,{{o.foto}} "  style="max-height: 500px;max-width: 500px;"/>
+                                        <img t-attf-src="data:image/*;base64,{{o.foto}} "
+                                             style="max-height: 500px;max-width: 500px;"/>
                                     </div>
                                 </div>
                             </t>
                         </t>
+                    </div>
+                </div>
+            </t>
+        </t>
+    </template>
+
+    <report id="action_report_informacion2"
+            string="Listaxe de Información 2.0"
+            model="odoo_basico.informacion" report_type="qweb-pdf"
+            name="odoo_basico.report_informacion_template2"
+            paperformat="paperformat_euro_portrait"/>
+    <template id="report_informacion_template2">
+        <t t-call="web.html_container">
+            <t t-call="web.external_layout">
+                <div class="page">
+                    <div class="container">
+                        <table class="table table-sm">
+                            <thead>
+                                <tr class="bg-primary">
+                                    <th class="text-left">Titulo(name)</th>
+                                    <th class="text-left">Altura</th>
+                                    <th class="text-left">Data</th>
+                                    <th class="text-left">Hora Actual</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <t t-set="suma_alto_en_cms" t-value="0"/>
+                                <t t-foreach="docs" t-as="o">
+                                    <tr>
+                                        <td class="text-left">
+                                            <h5>
+                                                <span t-field="o.name"/>
+                                            </h5>
+                                        </td>
+                                        <td class="text-left">
+                                            <span t-field="o.alto_en_cms"/>
+                                            <t t-if="o.alto_en_cms &gt; 3">
+                                                <t t-set="suma_alto_en_cms" t-value="suma_alto_en_cms + o.alto_en_cms"/>
+                                            </t>
+                                        </td>
+                                        <td class="text-left">
+                                            <h5>
+                                                <span t-field="o.data"/>
+                                            </h5>
+                                        </td>
+                                        <td class="text-left">
+                                            <h5>
+                                                <span t-field="o.hora_actual"/>
+                                            </h5>
+                                        </td>
+                                    </tr>
+                                </t>
+                                <td class="text-left">
+                                    <span>Suma de alturas maior a 3</span>
+                                </td>
+                                <td class="text-left">
+                                    <span t-esc="suma_alto_en_cms"/>
+                                </td>
+                                <td class="text-left">
+                                    <span>Total Altura:</span>
+                                </td>
+                                <td class="text-left">
+                                    <span t-esc="sum([x.alto_en_cms for x in docs])"/>
+                                </td>
+                            </tbody>
+                        </table>
                     </div>
                 </div>
             </t>

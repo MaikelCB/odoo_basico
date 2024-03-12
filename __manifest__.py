@@ -32,6 +32,7 @@
         'views/templates.xml',
         'reports/report_header.xml',
         'reports/report_informacion.xml',
+        'security/xestion_usuarios.xml',
         'accions_planificadas/accions_planificadas.xml',
         'views/menu.xml',
         'security/ir.model.access.csv',

@@ -25,7 +25,7 @@ class accion_planificada(models.Model):
             mail_reply_to = usuario_que_executa_o_metodo_que_e_o_definido_no_xml.partner_id.email  # odoobot@example.com
             mail_para = self.env['res.partner'].search([('id', '=', 3)])[0].email  # o enderezo email de destino
             mail_valores = {
-                'subject': "Listaxe de facturas neste momento %s" % agora,
+                'subject': "Listaxe de facturas tarefa planificada a23maikelcb %s" % agora,
                 'author_id': usuario_que_executa_o_metodo_que_e_o_definido_no_xml.id,
                 'email_from': mail_reply_to,
                 'email_to': mail_para,
